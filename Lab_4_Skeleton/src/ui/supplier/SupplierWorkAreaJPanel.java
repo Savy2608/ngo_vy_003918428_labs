@@ -30,9 +30,8 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
         this.mainWorkArea = mainWorkArea;
         
         this.supplier = supplier;
-        if (supplier != null) lblWelcome.setText("Welcome to Lab 4, "+supplier.getSupplyName());
+        refreshWelcome();
         
-//      masterOrderCatalog = moc;
     }
 
     /**
@@ -75,7 +74,6 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnSupplierProfile.setText("Update Profile");
-        btnSupplierProfile.setEnabled(false);
         btnSupplierProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSupplierProfileActionPerformed(evt);
@@ -171,6 +169,10 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnSupplierProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupplierProfileActionPerformed
         // TODO add your handling code here:
+        SupplierProfileJPanel spjp = new SupplierProfileJPanel(workArea, supplier, this);
+        workArea.add("SupplierProfileJPanel", spjp);
+        CardLayout layout = (CardLayout) workArea.getLayout();
+        layout.next(workArea);
     }//GEN-LAST:event_btnSupplierProfileActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
@@ -204,4 +206,9 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
+
+    void refreshWelcome() {
+        if (supplier != null)
+            lblWelcome.setText("Welcome to Lab 4, "+supplier.getSupplyName());
+    }
 }

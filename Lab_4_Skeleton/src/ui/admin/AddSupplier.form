@@ -63,7 +63,7 @@
                       <Component id="btnAddSupplier" min="-2" pref="115" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="423" max="32767" attributes="0"/>
+              <EmptySpace pref="422" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

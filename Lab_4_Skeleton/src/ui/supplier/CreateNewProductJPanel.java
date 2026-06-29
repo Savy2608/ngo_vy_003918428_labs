@@ -29,6 +29,7 @@ public class CreateNewProductJPanel extends javax.swing.JPanel {
         initComponents();
         this.supplier = supplier;
         this.workArea = workArea;
+        
     }
 
     /**
