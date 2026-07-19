@@ -16,6 +16,7 @@ public class Supplier {
     private String supplyName;
     private ProductCatalog productCatalog;
     private ImageIcon logoImage;
+    private String description;
 
     public ImageIcon getLogoImage() {
         return logoImage;
@@ -37,9 +38,19 @@ public class Supplier {
         this.supplyName = supplyName;
     }
 
-    public ProductCatalog getProductCatalog() {
-        return productCatalog;
+
+    public String getDescription() {
+        return description;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
+    public ProductCatalog getProductCatalog() {
+    return productCatalog;
+    }
+
     
     
     @Override
